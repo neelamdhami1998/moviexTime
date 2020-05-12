@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <th>quantity</th>
+        <th>total_amount</th>
+    </tr>
+        <% @transactions.each do |transactions| %>
+        <tr>
+            <td><%= transactions.quantity %></td>
+            <td><%= transactions.total_amount %></td>
+            
+        </tr>
+        <% end %>
+</table>
+
+

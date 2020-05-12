@@ -1,0 +1,2 @@
+class TimingsController < ApplicationController
+end

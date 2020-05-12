@@ -1,0 +1,17 @@
+<%= form_with scope: :transaction, url: transactions_path, local: true do |form| %>
+    <table>
+        <tr>
+            <td><%= form.label :quantity %></td>
+             <td><%= form.number_field :quantity %></td> 
+        </tr>
+        <tr>
+            <td><%= form.label :total_amount %></td>
+            <td><%= form.text_area :total_amount %>
+        </tr>
+        <tr>
+            <td> <%= form.submit %></td>
+        </tr>        
+    </table>
+<% end %>
+
+

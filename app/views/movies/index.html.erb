@@ -1,0 +1,29 @@
+<div class="container h-100">
+    <div class="row">
+            <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-12 col-xs-12">  
+        <div class="d-flex justify-content-center h-100">
+            <div class="user_card">
+              <tr>
+                <th>name</th>
+                <th>description</th>
+                <th>price</th>
+                <th>theater_id</th>
+              </tr>
+               <% @movies.each do |movie| %>
+              <tr>
+                  <td><%= movie.name %></td>
+                  <td><%= movie.description %></td>
+                  <td><%= movie.price%></td>
+                  <td><%= movie.theater_id%></td>
+                  <td><%= link_to 'Show', movie_path(movie) %></td>
+                  <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+              </tr>
+              <% end %>
+            </table>
+            <%= link_to 'new page ', new_movie_path %>
+             </div>
+            </div>
+          </div>
+    </div>
+</div>
+

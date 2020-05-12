@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <div class="content-container">
+        <div class="login-wrap">
+          <div class="wrapper">
+            <div class="pulse">
+          <div class="login-html login_title">
+            <h2>Change your password</h2>
+            <hr size="6" width="90%" align="left" color="blue">
+              <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+                  <%= f.hidden_field :reset_password_token %>
+                  <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab"></label>
+                  <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab"></label>
+                  <div class="login-form">
+                    <div class="sign-in-htm">
+                      <div class="group">
+                        <h4>New_Password</h4>
+                         <% if @minimum_password_length %>
+                          <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+                         <% end %>
+                         <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "input" %>
+                      </div>
+                      <div class="group">
+                        <h4>Password_confirmation</h4>
+                        <%= f.password_field :password_confirmation, autocomplete: "off", class: "input" %>
+                      </div>
+                      <div class="group">
+                        <%= f.submit "Change my password", class: "button" %>
+                      </div>
+              <% end %>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>        
+
+
+
+
+
+
+  
+

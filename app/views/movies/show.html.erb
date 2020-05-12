@@ -1,0 +1,23 @@
+<div><%= link_to 'back',dashboard_index_path,class: 'btn btn-success' %></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <div class="content-container">
+      	<div class="view"></div>
+		<h1><%= @movie.name %></h1>
+		<% @theaters.each do |t| %>
+		<div class="theater_view">
+			<h4><%= t.name %></h4>
+			<% t.fetch_time(@movie).each do |time| %>
+				<span><%#= time.start_time.strftime("%H:%M %p")%></span> 
+			<% end %>
+		</div>
+		<div class="book_now">
+			<%= link_to 'Book Now', theater_movie_book_now_path(t,@movie), class: "btn btn-success" %>
+		</div>
+		<% end %>
+      </div>
+    </div>
+    </div>
+</div>
+

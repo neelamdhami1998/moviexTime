@@ -1,0 +1,42 @@
+<p><%= link_to "Back ", marchant_users_path  , class: "btn btn-primary"%></p>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<div class="content-container">
+				<h1><%=@theater.name%></h1>
+					<table class="table">
+					 	 <thead class="thead-dark">
+					   		 <tr>
+					      		<th scope="col">name</th>
+					      		<th scope="col">description</th>
+	      						<th scope="col">price</th>
+	      						<th scope="col">start date </th>
+	      						<th scope="col">end date </th>
+	      						<th scope="col">active</th>
+	      						<th colspan="2">Actions</th>
+					    	</tr>
+					  </thead>
+					  <tbody>
+					  	<% @theater.movies.each do |movie| %>  
+						    <tr>
+						      <td><%= movie.name%></td>
+						      <td><%= movie.description %></td>
+						      <td><%= movie.price %></td>
+						      <td><%= movie.start_date%></td>
+						      <td><%= movie.end_date %></td>
+						      <td><%= movie.status%></td>
+						      <td><%= link_to "edit" , edit_theater_movie_path(@theater, movie) %></td>
+						      <td><%= link_to " show  " , movie_info_path(movie) , class: "btn btn-success"%></td>
+						    </tr>
+						<% end %>
+					  </tbody>
+					</table>
+				<p><%= link_to " add movie " ,new_theater_movie_path(@theater) , class: "btn btn-success"%></p>
+				
+			</div>
+		</div>
+	</div>
+</div>					
+
+
+

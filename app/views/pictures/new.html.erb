@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="content-container">
+                <p><%= @movie.name%>
+                    <%= @movie.description %>
+                    <%= @movie.price %>
+                    <%= @movie.start_date%>
+                    <%= @movie.end_date %>
+                    <%= @movie.status%>
+                </p><br><br>
+                <div class="row"> 
+                    <% @pictures.each do|picture|%>
+                        <div class="col-md-4">
+                            <%= image_tag(picture.image.url, height: 200, width: 150)%>
+                        </div>
+                    <% end %>
+                </div>
+                <%= form_for [@movie , @picture] do |form| %><br><br>
+                    <p><%= form.label :upload_image %>
+                    <%= form.file_field :image %></p>
+                    <p><%= form.submit "Upload", class: "btn btn-primary" %></p>
+                  <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <div class="content-container">
+        <div class="login-wrap">
+          <div class="wrapper">
+            <div class="pulse">
+              <div class="login-html login_title">
+               <h2>Login</h2>
+               <hr size="6" width="25%" align="left" color="blue">
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                  <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab"></label>
+                  <input id="tab-1" type="radio" name="tab" class="for-pwd"><label for="tab-1" class="tab"></label> 
+                  <div class="login-form" >
+                    <div class="sign-in-htm">
+                        <div class="group">
+                            <h4><label >mobile or Email</label></h4>
+                            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>
+                        </div>
+                        <div class="group">
+                            <h4><label for="pass" >Password</label></h4>
+                            <%= f.password_field :password, autocomplete: "current-password", class: "input" %>
+                        </div>
+                        <% if devise_mapping.rememberable? %>
+                            <div class="field" >
+                                <h5><%= f.check_box :remember_me %>
+                                <%= f.label :remember_me %></h5>
+                            </div>
+                        <% end %>
+                          <div class="group" lass="actions">
+                              <%= f.submit "Log in" ,class: "button"%>
+                          </div>
+                         <%= render "devise/shared/links" %>
+                    </div>
+                </div>
+                <% end %>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

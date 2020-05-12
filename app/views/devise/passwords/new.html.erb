@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<div class="content-container">
+				<div class="login-wrap">
+					<div class="wrapper">
+            		<div class="pulse">
+					<div class="login-html login_title">
+						<h2>Forgot your password?</h2>
+						<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+				  		<%= render "devise/shared/error_messages", resource: resource %>
+						<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab"></label>
+						<input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab"></label>
+						<div class="login-form">
+							<div class="sign-in-htm">
+								<div class="group">
+									<h3>enter your email</h3>
+									<%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>
+								</div>
+								<div class="group" class="actions">
+									<%= f.submit "Send reset password instructions", class: "button" %>
+								</div>
+								<% end %>
+							</div>
+						</div>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+  
+
+
+

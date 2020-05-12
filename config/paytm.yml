@@ -1,0 +1,18 @@
+defaults: &defaults
+   PAYTM_MERCHANT_KEY: 'qI2tWvC@MXt8LJ7w'
+   WEBSITE: 'WEBSTAGING'
+   MID: 'jYtKYK69296026755179'
+   INDUSTRY_TYPE_ID: 'Retail'
+   CHANNEL_ID: 'WEB'
+   payment_url: 'https://securegw-stage.paytm.in/theia/processTransaction'
+
+development:
+   <<: *defaults
+   callback_url: "http://localhost:3001/verify_payment"
+
+test:
+   <<: *defaults
+
+production:
+   <<: *defaults
+   callback_url: "http://api.webintimate.com/paytm/verify_payment"

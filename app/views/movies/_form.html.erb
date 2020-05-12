@@ -1,0 +1,77 @@
+<%= link_to 'Back',theater_path(@theater), class: "btn btn-primary" %>
+<div class="container h-100">
+    <div class="row">
+        <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-12 col-xs-12">  
+            <div class="card_height">
+                
+                    <h1><%= @theater.name %></h1>
+                <%= nested_form_for [ @theater, @movie ] do |form| %>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="group" > Name</label>
+                                    <td><%= form.text_field :name,class: "input",placeholder: "movie Name" %><td>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="group"> price</label>
+                                    <td><%= form.number_field :price,class: "input" %><td>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="group">start_date</label>
+                                    <td><%= form.date_field :start_date,class: "input" %><td>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="group">end_date</label>
+                                    <td><%= form.date_field :end_date,class: "input" %><td>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="group" >description</label>
+                                    <td><%= form.text_field :description,class: "input",placeholder: "description" %><td>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                                <div class="form-group">
+                                    <label class="group">Active</label>
+                                    <td><%= form.check_box :status,class: "input" %><td>
+                                </div>
+                            </div>
+                            <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                <div class="nested-fields">
+                            <%= form.fields_for :timings do |form| %>
+                                <label class="group">start_time</label>
+                                <td><%= form.time_field :start_time,class: "input" %></td>
+                                <%= form.link_to_remove "Remove this task" %>
+                            <% end %>
+                            <p><%= form.link_to_add "Add timing", :timings,class: "btn btn-info" %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                            <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                            <div class= "nested-fields" >
+                            <%= form.fields_for :pictures do |form| %>
+                                <label class="group">image</label>
+                                  
+                                  <td><%= form.file_field :image %></td>
+                                  <%= form.link_to_remove "Remove this task",class: "input" %>
+                            <% end %>
+                              <p><%= form.link_to_add "Add Pictures", :pictures, class: "btn btn-info" %></p>
+                            </div>
+                            </div>
+                        </div>
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                            <td> <%= form.submit "save", class: "btn btn-primary" %></td>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

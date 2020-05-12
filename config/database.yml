@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  template: template0
+  database: online_movie_development
+  username: postgres
+  password: root
+  pool: 5
+  host: localhost
+
+
+
+
+  

@@ -1,0 +1,30 @@
+<div class="container">
+   <div class="row" >
+   	<% @movies.each do |movie|%>
+      <div class="col-md-4">
+         <figure class="card card-product">
+            <div class="img-wrap">
+               <img src="/assets/image2.jpg">
+            </div>
+            <figcaption class="info-wrap">
+               <h4 class=""><%= movie.name %></h4>
+               <p class="desc">Some small description goes here</p>
+               <div class="rating-wrap">
+                  <div class="label-rating">132 reviews</div>
+                  <div class="label-rating">154 book </div>
+               </div>
+            </figcaption>
+            <div class="bottom-wrap">
+               <%= link_to "Book Now", movie_path(movie.id), class: "btn btn-sm btn-primary float-right" %>
+               <div class="price-wrap h5">
+                  <span class="price-new">$1280</span> <del class="price-old">$1980</del>
+               </div>
+            </div>
+         </figure>
+      </div>
+      <% end %>
+   </div>
+</div>
+
+
+
