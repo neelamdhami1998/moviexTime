@@ -7,6 +7,6 @@ class TimingsController < ApplicationController
 		movie_id = params[:movie]
 		theater_id =  params[:theater]
 		@movie = Movie.find(movie_id)
-		@theater = Theater.find(movie_id)
+		@theater = Theater.find(theater_id)
 	end
 end
