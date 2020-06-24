@@ -3,7 +3,14 @@
   <div class="row">
     <div class="col-md-12 col-sm-12">
       <div class="content-container">
-      	<div class="view"></div>
+      	<%if @movie.pictures.present? %>
+      			<% @movie.pictures.each do |movie|%>
+               <img src="<%= movie.image.url%>">
+               <%end%>
+            <%else%>
+                           <img src="/assets/image1.jpg">
+
+            <%end%>
 		<h1><%= @movie.name %></h1>
 		<% @theaters.each do |t| %>
 		<div class="theater_view">

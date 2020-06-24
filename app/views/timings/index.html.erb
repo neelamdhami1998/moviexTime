@@ -1137,7 +1137,7 @@ input[type=checkbox]:checked:before {
                             <textarea id="seatsDisplay"></textarea>
                         </td>
                         <td>
-                            <%= link_to 'ok', class: 'btn btn-success' %>
+                            <%= link_to 'ok' , theater_movie_book_now_path(movie_id: @movie.id , theater_id: @theater.id) , class: 'btn btn-success' %>
                         </td>
                     </tr>
                 </table>

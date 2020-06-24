@@ -33,7 +33,7 @@
                             </tr>        
                         </table>
                     <% end %>
-                       <div><%= link_to 'select your seat',timings_path,class: 'btn btn-success' %></div>
+                       <div><%= link_to 'select your seat',timings_path(movie: @movie.id , theater: @theater.id),class: 'btn btn-success' %></div>
 
                     </div>
                 </div>

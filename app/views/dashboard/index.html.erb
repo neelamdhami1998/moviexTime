@@ -4,8 +4,12 @@
       <div class="col-md-4">
          <figure class="card card-product">
             <div class="img-wrap">
-               <img src="/assets/image1.jpg">
-               
+            <%if movie.pictures.present? %>
+               <img src="<%= movie.pictures.first.image.url%>">
+            <%else%>
+                           <img src="/assets/image1.jpg">
+
+            <%end%>
             </div>
             <figcaption class="info-wrap">
                <h2 class=""><%= movie.name %></h2>
