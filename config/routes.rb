@@ -14,6 +14,7 @@ Rails.application.routes.draw do
             get :book_now
         end
     end
+    resources :timings
     resources :movies, only: [:show] do
         get :add_picture
         get :info

@@ -30,11 +30,11 @@
     color: #999;
 }
 
-body{
+/*body{
     font-family: 'Quicksand', sans-serif;
     background-color: #f6f6f6;
 }
-
+*/
 #header{
 
  width: 100%;
@@ -69,9 +69,6 @@ background-size: cover;
 background-position: center;
 }
 
-#jumbotron2{    
-    
-}
 .card-body span{
   color: white;
   padding: 10px;
@@ -90,6 +87,8 @@ background-position: center;
 .row{
     margin-top: 20px;
 }
+
+
 /*tt4y*/
 body {
   margin:0;
@@ -281,10 +280,10 @@ a{color:inherit;text-decoration:none}
 
 
 /*login page*/
-body {
+/*body {
     margin:0;
     padding:0;
-}
+}*/
 .wrapper {
     height:80vh;
     -webkit-animation: slide 60s linear infinite;
@@ -325,54 +324,10 @@ body {
         background-position:719px 0px;
     }
 }
-/*moviebookingshowpage*/
-  body,
-    html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    .user_card {
-      height: 450px;
-      width: 540px;
-      margin-top: auto;
-      margin-bottom: auto;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      padding: 40px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      border-radius: 5px;
-
-    }
-    .card_height{
-
-      
-      margin-top: auto;
-      margin-bottom: auto;
-      background: #828588;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      padding: 20px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      border-radius: 5px;
-
-
-    }
-/*quantitysize*/
-.size{
-    width: 80px;
+.user_card{
+  background-color: white;
+  width:500px;
+  height:500px;
+  margin:30px;
 
 }
-
-#banner {
-
-background: url(https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1485547918/new-york-city-skyline-BIGCITY0117.jpg?itok=po0Op8ou) repeat-x;
-     }

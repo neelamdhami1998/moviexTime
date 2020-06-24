@@ -9,7 +9,7 @@
 		<div class="theater_view">
 			<h4><%= t.name %></h4>
 			<% t.fetch_time(@movie).each do |time| %>
-				<span><%#= time.start_time.strftime("%H:%M %p")%></span> 
+				<span><%= time.start_time.strftime("%H:%M %p")%></span> 
 			<% end %>
 		</div>
 		<div class="book_now">
